@@ -1,12 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        div.page {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 1fr 12fr 20px;
+            grid-template-areas: 'header header' 
+                                 'menu mainContent'
+                                 'footer footer';
+        }
+
+        div.header {
+            background-color: aqua;
+            grid-area: header;
+            font-size: x-large;
+        }
+
+        div.menu {
+            background-color: aquamarine;
+            grid-area: menu;
+        }
+
+        div.mainContent {
+            background-color: blanchedalmond;
+            grid-area: mainContent;
+        }
+
+        div.footer {
+            background-color: lightgrey;
+            grid-area: footer;
+        }
+        
+
+       /* @media only screen and (max-width: 600px) {
+            div.page {
+                grid-template-columns: 1fr;
+                grid-template-rows: 20px 1fr 4fr 20px;
+                grid-template-areas: 'header' 
+                                     'menu'
+                                     'mainContent'
+                                     'footer';
+            } 
+
+        }*/
+    </style>
 </head>
 <body>
-    
+    <div class="page">
+        <div class="header" style="text-align: center;">Header</div>
+        <div class="menu">Menu <div>Navigation</div>
+            <br>Home<br>About<br>Contact
+        </div>
+        <div class="mainContent">MainContent <br><br> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+        <div class="footer">Footer</div>
+    </div>
 </body>
 </html>
